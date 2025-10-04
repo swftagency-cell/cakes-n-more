@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - M'O Cakes N More</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&family=Lobster:wght@400&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <img src="images/cake.jpg" alt="logodesign" class="logo">
+            <span class="brand-text">M'O CAKES N MORE</span>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+
+        <div class="navbar-nav" id="navbarNav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="menu.html" class="nav-link">Menu</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="contact.html" class="nav-link active">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <main class="contact-section" id="contact">
+        <div class="contact-container">
+            <header class="contact-header">
+                <h1 class="contact-title">Get In Touch</h1>
+                <p class="contact-subtitle">We’d love to hear about your celebration and help craft the perfect cake.</p>
+            </header>
+
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <section class="contact-form-card" aria-labelledby="contact-form-title">
+                    <h2 id="contact-form-title" class="contact-card-title">Send Us a Message</h2>
+                    <form id="contact-form" novalidate>
+                        <div class="form-row">
+                            <label for="name">Name <span class="required">*</span></label>
+                            <input id="name" name="name" type="text" placeholder="Your full name" required>
+                            <small class="field-hint">Please enter your name.</small>
+                        </div>
+
+                        <div class="form-row">
+                            <label for="email">Email <span class="required">*</span></label>
+                            <input id="email" name="email" type="email" placeholder="you@example.com" required>
+                            <small class="field-hint">We’ll use this to respond to you.</small>
+                        </div>
+
+                        <div class="form-row">
+                            <label for="subject">Subject</label>
+                            <input id="subject" name="subject" type="text" placeholder="e.g., Birthday cake inquiry">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="message">Message <span class="required">*</span></label>
+                            <textarea id="message" name="message" rows="6" placeholder="Tell us about your order, date, size, flavors…" required></textarea>
+                            <small class="field-hint">Share any details you’d like us to know.</small>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="product-btn contact-submit" aria-label="Send message">Send Message</button>
+                        </div>
+
+                        <div id="form-status" class="form-status" aria-live="polite"></div>
+                    </form>
+                </section>
+
+                <!-- Company Info -->
+                <aside class="contact-info-card" aria-labelledby="contact-info-title">
+                    <h2 id="contact-info-title" class="contact-card-title">Company Information</h2>
+                    <ul class="contact-info-list">
+                        <li class="info-item">
+                            <span class="info-icon" aria-hidden="true">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92V20a2 2 0 0 1-2.18 2A19.86 19.86 0 0 1 2 5.18 2 2 0 0 1 4 3h3.09a2 2 0 0 1 2 1.72 12.66 12.66 0 0 0 .7 2.75 2 2 0 0 1-.45 2.11L8.09 11a16 16 0 0 0 6.91 6.91l1.42-1.43a2 2 0 0 1 2.11-.45 12.66 12.66 0 0 0 2.75.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="2"/></svg>
+                            </span>
+                            <div class="info-content">
+                                <strong>Phone</strong>
+                                <span>+234-810-591-6190</span>
+                            </div>
+                        </li>
+                        <li class="info-item">
+                            <span class="info-icon" aria-hidden="true">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4h16v16H4z" stroke="currentColor" stroke-width="2"/><path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="2"/></svg>
+                            </span>
+                            <div class="info-content">
+                                <strong>Email</strong>
+                                <span>hello@mocakesnmore.com</span>
+                            </div>
+                        </li>
+                        <li class="info-item">
+                            <span class="info-icon" aria-hidden="true">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" stroke="currentColor" stroke-width="2"/></svg>
+                            </span>
+                            <div class="info-content">
+                                <strong>Address</strong>
+                                <span>Abeokuta, Nigeria</span>
+                            </div>
+                        </li>
+                        <li class="info-item">
+                            <span class="info-icon" aria-hidden="true">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 8v5l4 2" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/></svg>
+                            </span>
+                            <div class="info-content">
+                                <strong>Hours</strong>
+                                <span>Mon–Sat: 9:00 AM – 6:00 PM</span>
+                            </div>
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Site Footer (copied for consistency) -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Brand & Intro -->
+                <div class="footer-brand">
+                    <img src="images/cake.jpg" alt="M'O Cakes N More logo" class="logo">
+                    <div class="footer-brand-text">
+                        <h3 class="footer-title">Cakes & More</h3>
+                        <p class="footer-tagline">Handcrafted sweets for every celebration.</p>
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <nav class="footer-nav" aria-label="Footer Navigation">
+                    <h4 class="footer-heading">Navigate</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="menu.html">MENU</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Social Media -->
+                <div class="footer-social">
+                    <h4 class="footer-heading">Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/_mos.cakesnmore/" aria-label="Instagram" class="social-link" title="Instagram">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
+                            </svg>
+                        </a>
+                       
+                        <a href="https://wa.link/r4weiy" aria-label="WhatsApp" class="social-link" title="WhatsApp">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.52 3.48A11.77 11.77 0 0 0 12 0a11.77 11.77 0 0 0-8.52 3.48C-1.3 7.26-1.16 13.22 2.46 16.9L1 24l7.27-1.9a11.62 11.62 0 0 0 3.73.6h.01c3.14 0 6.09-1.22 8.31-3.43a11.77 11.77 0 0 0 0-16.79zM12 21.5h-.01a9.77 9.77 0 0 1-4.98-1.36l-.36-.21-4.32 1.13 1.15-4.21-.24-.38A9.76 9.76 0 0 1 2.23 6.1 9.77 9.77 0 0 1 12 2.25c2.62 0 5.09 1.02 6.95 2.88a9.77 9.77 0 0 1 0 13.84A9.77 9.77 0 0 1 12 21.5z" fill="currentColor"/>
+                                <path d="M17.47 13.88c-.27-.14-1.58-.78-1.83-.87-.24-.09-.42-.14-.6.14-.18.27-.69.87-.85 1.05-.16.18-.31.2-.58.07-.27-.14-1.15-.42-2.2-1.34-.81-.72-1.36-1.6-1.52-1.87-.16-.27-.02-.42.12-.55.12-.12.27-.31.4-.47.13-.16.18-.27.27-.45.09-.18.04-.34-.02-.47-.07-.14-.6-1.44-.82-1.98-.21-.54-.44-.46-.6-.46-.16 0-.34 0-.52 0-.18 0-.47.07-.72.34-.25.27-.96.94-.96 2.29 0 1.34.99 2.64 1.13 2.82.14.18 1.95 3.13 4.73 4.39.66.28 1.17.45 1.57.58.66.21 1.26.18 1.73.11.53-.08 1.58-.64 1.8-1.26.22-.62.22-1.16.15-1.26-.06-.1-.24-.16-.51-.3z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">&copy; <span id="current-year"></span> M'O Cakes N More. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a class="legal-link" href="#">Privacy Policy</a>
+                    <span class="separator">|</span>
+                    <a class="legal-link" href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const navbarNav = document.getElementById('navbarNav');
+            const mobileToggle = document.querySelector('.mobile-menu-toggle');
+            navbarNav.classList.toggle('mobile-menu-active');
+            mobileToggle.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking on a nav link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                const navbarNav = document.getElementById('navbarNav');
+                const mobileToggle = document.querySelector('.mobile-menu-toggle');
+                navbarNav.classList.remove('mobile-menu-active');
+                mobileToggle.classList.remove('active');
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Contact form submission & feedback (mailto-based)
+        const form = document.getElementById('contact-form');
+        const statusEl = document.getElementById('form-status');
+        const submitBtn = document.querySelector('.contact-submit');
+        const RECIPIENTS = ['anushow299@gmail.com']; // Add more addresses if needed
+
+        function setStatus(message, type = 'info') {
+            statusEl.textContent = message;
+            statusEl.className = 'form-status ' + type;
+        }
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Basic client-side validation
+            const name = document.getElementById('name');
+            const email = document.getElementById('email');
+            const message = document.getElementById('message');
+            const subjectInput = document.getElementById('subject');
+
+            if (!name.value.trim() || !email.value.trim() || !message.value.trim()) {
+                setStatus('Please complete all required fields.', 'error');
+                return;
+            }
+
+            // Simple email format check
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email.value)) {
+                setStatus('Please enter a valid email address.', 'error');
+                return;
+            }
+
+            // Build mailto URL with prefilled recipient(s), subject, and body
+            const to = RECIPIENTS.join(',');
+            const subject = (subjectInput && subjectInput.value.trim())
+                ? subjectInput.value.trim()
+                : `New enquiry from ${name.value.trim()}`;
+            const bodyLines = [
+                `Hello M'O Cakes N More,`,
+                '',
+                `Name: ${name.value.trim()}`,
+                `Email: ${email.value.trim()}`,
+                '',
+                'Message:',
+                message.value.trim(),
+                '',
+                '— Sent from the website contact form —'
+            ];
+            const body = bodyLines.join('\n');
+            const mailtoURL = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+            // Provide UX feedback and open the user's email client
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Opening email…';
+            setStatus('Opening your email app to send the message…', 'info');
+            window.location.href = mailtoURL;
+            // Re-enable button after a short delay in case navigation is blocked
+            setTimeout(() => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send Message';
+            }, 1500);
+        });
+
+        // Set current year in footer
+        document.addEventListener('DOMContentLoaded', () => {
+            const yearEl = document.getElementById('current-year');
+            if (yearEl) yearEl.textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>

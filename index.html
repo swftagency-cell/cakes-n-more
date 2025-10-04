@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cakes & More</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&family=Lobster:wght@400&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <img src="images/cake.jpg" alt="logodesign" class="logo">
+            <span class="brand-text">M'O CAKES N MORE</span>
+        </div>
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+        
+        <div class="navbar-nav" id="navbarNav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="menu.html" class="nav-link">Menu</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Interactive Video Background Carousel -->
+    <div class="video-carousel-container">
+        <div class="video-carousel" id="videoCarousel">
+            <div class="video-slide active" data-video="0">
+                <video autoplay muted loop playsinline webkit-playsinline preload="metadata" class="carousel-video">
+                    <source src="vid/WhatsApp%20Video%202025-09-29%20at%2006.10.13_a91221f0.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-slide" data-video="1">
+                <video muted loop playsinline webkit-playsinline preload="metadata" class="carousel-video">
+                    <source src="vid/WhatsApp%20Video%202025-09-29%20at%2006.10.16_cb6b1739.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-slide" data-video="2">
+                <video muted loop playsinline webkit-playsinline preload="metadata" class="carousel-video">
+                    <source src="vid/WhatsApp%20Video%202025-09-29%20at%2016.39.23_2f58b243.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-slide" data-video="3">
+                <video muted loop playsinline webkit-playsinline preload="metadata" class="carousel-video">
+                    <source src="vid/WhatsApp%20Video%202025-09-29%20at%2016.39.26_50e103d7.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        
+        <!-- Navigation Controls -->
+        <div class="carousel-controls">
+            <button class="carousel-btn prev-btn" id="prevBtn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <button class="carousel-btn next-btn" id="nextBtn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Video Indicators -->
+        <div class="video-indicators" id="videoIndicators">
+            <div class="indicator active" data-video="0"></div>
+            <div class="indicator" data-video="1"></div>
+            <div class="indicator" data-video="2"></div>
+            <div class="indicator" data-video="3"></div>
+        </div>
+        
+        <!-- Auto-play Control -->
+        <div class="autoplay-control">
+            <button class="autoplay-btn" id="autoplayBtn">
+                <svg class="play-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <polygon points="5,3 19,12 5,21" fill="currentColor"/>
+                </svg>
+                <svg class="pause-icon hidden" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <rect x="6" y="4" width="4" height="16" fill="currentColor"/>
+                    <rect x="14" y="4" width="4" height="16" fill="currentColor"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title" data-text="M'O CAKES N MORE">M'O CAKES N MORE</h1>
+                <p class="hero-subtitle">Handcrafted with love, baked to perfection. Experience the finest cakes and treats that bring joy to every celebration.</p>
+                <div class="hero-buttons">
+                    <a href="#services-section" class="hero-cta primary-cta">Our Services</a>
+                    <a href="menu.html" class="hero-cta secondary-cta">View Gallery</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="features-container">
+            <!-- Section Header -->
+            <div class="features-header">
+                <h2 class="features-title">Why Choose Us</h2>
+                <p class="features-subtitle">Discover what makes our cakes special and why customers love us</p>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="features-grid">
+                <!-- Feature 1: Affordable Cakes -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="25" cy="25" r="20" fill="#e91e63" opacity="0.2"/>
+                            <path d="M15 25h20M20 20h10M18 30h14" stroke="#e91e63" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="25" cy="25" r="3" fill="#e91e63"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Affordable Cakes</h3>
+                    <p class="feature-description">Our cakes are affordable, delicious and excellent.</p>
+                </div>
+
+                <!-- Feature 2: Free Sparklers -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="25" cy="25" r="20" fill="#e91e63" opacity="0.2"/>
+                            <path d="M25 10v30M15 15l20 20M35 15L15 35M20 10l10 10M30 10L20 20M20 40l10-10M30 40L20 30" stroke="#e91e63" stroke-width="1.5" stroke-linecap="round"/>
+                            <circle cx="25" cy="25" r="2" fill="#e91e63"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Free Sparklers!</h3>
+                    <p class="feature-description">We always add free sparklers to any cake you order from us</p>
+                </div>
+
+                <!-- Feature 3: Fastest Shipping -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="25" cy="25" r="20" fill="#e91e63" opacity="0.2"/>
+                            <path d="M10 25h25M30 20l5 5-5 5M15 15h10M15 35h10" stroke="#e91e63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="12" cy="32" r="3" stroke="#e91e63" stroke-width="1.5" fill="none"/>
+                            <circle cx="32" cy="32" r="3" stroke="#e91e63" stroke-width="1.5" fill="none"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Fastest Shipping</h3>
+                    <p class="feature-description">We deliver even at the shortest notice</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Counter Section -->
+    <section class="counter-section">
+        <div class="counter-container">
+            <div class="counter-content">
+                <div class="counter-number" id="counterNumber">0</div>
+                <div class="counter-label">Successful Cake Deliveries</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best New Selections Section -->
+    <section class="selections-section">
+        <div class="selections-container">
+            <!-- Section Header -->
+            <div class="selections-header">
+                <h2 class="selections-title">Best New Selections</h2>
+                <p class="selections-subtitle">Discover our latest and most popular cake creations, crafted with premium ingredients</p>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="selections-grid">
+                <!-- Product 1: Chocolate Delight -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img class="img-fluid" loading="lazy" src="images/chocolate.jpg" alt="Chocolate Delight – heart-shaped chocolate cake with chocolate frosting" />
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Chocolate Delight</h3>
+                        <p class="product-description">Rich chocolate layers with premium cocoa and fresh cream</p>
+                        <div class="product-price"></div>
+                        <button class="product-btn">Order Now</button>
+                    </div>
+                </div>
+
+                <!-- Product 2: Strawberry Dream -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img class="img-fluid" loading="lazy" src="images/cupcake.jpg" alt="Cupcake selection – assorted cupcakes" />
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Cupcake and Muffins</h3>
+                        <p class="product-description">Fresh strawberries with vanilla cream and light sponge</p>
+                        <div class="product-price"></div>
+                        <button class="product-btn">Order Now</button>
+                    </div>
+                </div>
+
+                <!-- Product 3: Vanilla Classic -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/vanilla.jpg" alt="">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Vanilla Classic</h3>
+                        <p class="product-description">Traditional vanilla cake with buttercream frosting</p>
+                        <div class="product-price"></div>
+                        <button class="product-btn">Order Now</button>
+                    </div>
+                </div>
+
+                <!-- Product 4: Red Velvet Luxury -->
+                <div class="product-card">
+                    <div class="product-image">
+                      <img src="images/redvelvet.jpg" alt="">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Red Velvet Luxury</h3>
+                        <p class="product-description">Smooth red velvet with cream cheese frosting</p>
+                        <div class="product-price"></div>
+                        <button class="product-btn">Order Now</button>
+                    </div>
+                </div>
+
+                <!-- Product 5: Black Forest Special -->
+                <div class="product-card">
+                    <div class="product-image">
+                  <img src="images/birthday.jpg" alt="">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Birthday Cake</h3>
+                        <p class="product-description">Chocolate cake with cherries and whipped cream</p>
+                        <div class="product-price"></div>
+                        <button class="product-btn">Order Now</button>
+                    </div>
+                </div>
+
+                <!-- Product 6: Butterscotch Bliss -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/engeage.jpg" alt="">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Engagement Cake</h3>
+                        <p class="product-description">Caramel flavored cake with butterscotch chips</p>
+                        <div class="product-price"></div>
+                        <button class="product-btn">Order Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+
+    <section class="services-section" id="services-section">
+        <div class="container">
+            <div class="services-header">
+                <h2 class="services-title">Our Services</h2>
+                <p class="services-subtitle">Discover our range of delicious offerings and premium services</p>
+            </div>
+            <div class="services-grid">
+                <!-- Service 1: Cakes -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="80" height="80" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="35" fill="#e91e63"/>
+                            <circle cx="50" cy="45" r="25" fill="#f8bbd9"/>
+                            <circle cx="50" cy="40" r="15" fill="#ffffff"/>
+                            <circle cx="45" cy="35" r="2" fill="#e91e63"/>
+                            <circle cx="55" cy="35" r="2" fill="#e91e63"/>
+                            <path d="M40 30 Q50 25 60 30 Q50 35 40 30" fill="#ff69b4"/>
+                            <rect x="48" y="65" width="4" height="15" fill="#8b4513"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Custom Cakes</h3>
+                    <p class="service-description">Handcrafted cakes for every occasion - birthdays, weddings, anniversaries, and special celebrations. Made with premium ingredients and artistic designs.</p>
+                    <ul class="service-features">
+                        <li>Custom designs and flavors</li>
+                        <li>Fresh ingredients daily</li>
+                        <li>Professional decoration</li>
+                        <li>Same-day delivery available</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2: Treats -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="80" height="80" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="30" cy="40" r="12" fill="#e91e63"/>
+                            <circle cx="50" cy="35" r="10" fill="#f8bbd9"/>
+                            <circle cx="70" cy="40" r="12" fill="#e91e63"/>
+                            <circle cx="25" cy="60" r="8" fill="#ff69b4"/>
+                            <circle cx="45" cy="55" r="9" fill="#e91e63"/>
+                            <circle cx="65" cy="60" r="8" fill="#f8bbd9"/>
+                            <circle cx="75" cy="60" r="6" fill="#ff69b4"/>
+                            <circle cx="35" cy="75" r="7" fill="#e91e63"/>
+                            <circle cx="55" cy="75" r="8" fill="#f8bbd9"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Sweet Treats</h3>
+                    <p class="service-description">Delightful assortment of pastries, cupcakes, cookies, and confections. Perfect for parties, office meetings, or personal indulgence.</p>
+                    <ul class="service-features">
+                        <li>Cupcakes and muffins</li>
+                        <li>Artisan cookies</li>
+                        <li>Pastries and donuts</li>
+                        <li>Seasonal specialties</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3: Gift Packaging -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="80" height="80" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="20" y="35" width="60" height="45" fill="#f8bbd9" rx="5"/>
+                            <rect x="25" y="40" width="50" height="35" fill="#ffffff" rx="3"/>
+                            <rect x="45" y="20" width="10" height="60" fill="#e91e63"/>
+                            <rect x="20" y="45" width="60" height="10" fill="#e91e63"/>
+                            <circle cx="35" cy="30" r="4" fill="#ff69b4"/>
+                            <circle cx="50" cy="25" r="3" fill="#e91e63"/>
+                            <circle cx="65" cy="30" r="4" fill="#ff69b4"/>
+                            <path d="M45 15 Q50 10 55 15 Q50 20 45 15" fill="#e91e63"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Gift Packaging</h3>
+                    <p class="service-description">Beautiful presentation for your sweet gifts. Premium packaging options that make every occasion extra special and memorable.</p>
+                    <ul class="service-features">
+                        <li>Elegant gift boxes</li>
+                        <li>Custom ribbons and cards</li>
+                        <li>Corporate packaging</li>
+                        <li>Eco-friendly options</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="services-cta">
+            <a href="menu.html" class="choose-cake-link" onclick="scrollToSection('selections-section'); return false;">
+                CHOOSE A CAKE NOW
+            </a>
+        </div>
+    </section>
+   
+
+
+
+   
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="testimonials-header">
+                <h2 class="testimonials-title">What Our Customers Say</h2>
+                <p class="testimonials-subtitle">Real feedback from our valued customers</p>
+            </div>
+            <div class="testimonials-carousel">
+                <div class="testimonials-container">
+                    <div class="testimonial-slide active">
+                        <div class="testimonial-content">
+                            <div class="testimonial-stars">
+                                <span>★★★★★</span>
+                            </div>
+                            <p class="testimonial-text">"Absolutely amazing cakes! The chocolate delight was perfect for my daughter's birthday. The design was exactly what we wanted and the taste was incredible. Will definitely order again!"</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <span>S</span>
+                                </div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Sarah Johnson</h4>
+                                    <p class="author-location">Mumbai</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <div class="testimonial-stars">
+                                <span>★★★★★</span>
+                            </div>
+                            <p class="testimonial-text">"The red velvet cake was a hit at our anniversary party! Beautiful presentation and the gift packaging was elegant. Customer service was excellent throughout the process."</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <span>R</span>
+                                </div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Rajesh Patel</h4>
+                                    <p class="author-location">Delhi</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <div class="testimonial-stars">
+                                <span>★★★★★</span>
+                            </div>
+                            <p class="testimonial-text">"Best bakery in town! Their treats are always fresh and delicious. The butterscotch bliss is my personal favorite. Fast delivery and great prices too!"</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <span>P</span>
+                                </div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Priya Sharma</h4>
+                                    <p class="author-location">Bangalore</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <div class="testimonial-stars">
+                                <span>★★★★★</span>
+                            </div>
+                            <p class="testimonial-text">"Ordered a custom cake for our office celebration. The team was professional, the cake was stunning, and everyone loved it. Highly recommend their services!"</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <span>A</span>
+                                </div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Amit Kumar</h4>
+                                    <p class="author-location">Pune</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev-btn" onclick="changeSlide(-1)">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="carousel-btn next-btn" onclick="changeSlide(1)">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="carousel-indicators">
+                    <span class="indicator active" onclick="currentSlide(1)"></span>
+                    <span class="indicator" onclick="currentSlide(2)"></span>
+                    <span class="indicator" onclick="currentSlide(3)"></span>
+                    <span class="indicator" onclick="currentSlide(4)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <script>
+        function toggleMobileMenu() {
+            const navbarNav = document.getElementById('navbarNav');
+            const mobileToggle = document.querySelector('.mobile-menu-toggle');
+            
+            navbarNav.classList.toggle('mobile-menu-active');
+            mobileToggle.classList.toggle('active');
+        }
+        
+        // Close mobile menu when clicking on a nav link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                const navbarNav = document.getElementById('navbarNav');
+                const mobileToggle = document.querySelector('.mobile-menu-toggle');
+                
+                navbarNav.classList.remove('mobile-menu-active');
+                mobileToggle.classList.remove('active');
+            });
+        });
+        
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Video Carousel Functionality
+        class VideoCarousel {
+            constructor() {
+                this.currentSlide = 0;
+                this.slides = document.querySelectorAll('.video-slide');
+                this.indicators = document.querySelectorAll('.indicator');
+                this.prevBtn = document.querySelector('.prev-btn');
+                this.nextBtn = document.querySelector('.next-btn');
+                this.autoplayBtn = document.querySelector('.autoplay-btn');
+                this.carousel = document.querySelector('.video-carousel');
+                
+                this.isAutoplay = true;
+                this.autoplayInterval = null;
+                this.autoplayDelay = 5000; // 5 seconds
+                
+                this.touchStartX = 0;
+                this.touchEndX = 0;
+                this.isDragging = false;
+                
+                // Mobile detection
+                this.isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                this.isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+                
+                this.init();
+            }
+            
+            init() {
+                // Initialize all videos with mobile-friendly attributes
+                this.slides.forEach(slide => {
+                    const video = slide.querySelector('video');
+                    this.setupMobileVideoAttributes(video);
+                });
+                
+                this.setupEventListeners();
+                this.updateSlide();
+                this.startAutoplay();
+            }
+            
+            setupEventListeners() {
+                // Navigation buttons
+                this.prevBtn.addEventListener('click', () => this.prevSlide());
+                this.nextBtn.addEventListener('click', () => this.nextSlide());
+                
+                // Autoplay toggle
+                this.autoplayBtn.addEventListener('click', () => this.toggleAutoplay());
+                
+                // Indicator clicks
+                this.indicators.forEach((indicator, index) => {
+                    indicator.addEventListener('click', () => this.goToSlide(index));
+                });
+                
+                // Touch events for mobile
+                this.carousel.addEventListener('touchstart', (e) => this.handleTouchStart(e), { passive: true });
+                this.carousel.addEventListener('touchmove', (e) => this.handleTouchMove(e), { passive: true });
+                this.carousel.addEventListener('touchend', (e) => this.handleTouchEnd(e), { passive: true });
+                
+                // Mouse events for desktop
+                this.carousel.addEventListener('mousedown', (e) => this.handleMouseDown(e));
+                this.carousel.addEventListener('mousemove', (e) => this.handleMouseMove(e));
+                this.carousel.addEventListener('mouseup', (e) => this.handleMouseUp(e));
+                this.carousel.addEventListener('mouseleave', (e) => this.handleMouseUp(e));
+                
+                // Prevent context menu on long press
+                this.carousel.addEventListener('contextmenu', (e) => e.preventDefault());
+                
+                // Pause autoplay on hover
+                this.carousel.addEventListener('mouseenter', () => this.pauseAutoplay());
+                this.carousel.addEventListener('mouseleave', () => this.resumeAutoplay());
+            }
+            
+            handleTouchStart(e) {
+                this.touchStartX = e.touches[0].clientX;
+                this.pauseAutoplay();
+            }
+            
+            handleTouchMove(e) {
+                this.touchEndX = e.touches[0].clientX;
+            }
+            
+            handleTouchEnd(e) {
+                this.handleSwipe();
+                this.resumeAutoplay();
+            }
+            
+            handleMouseDown(e) {
+                this.isDragging = true;
+                this.touchStartX = e.clientX;
+                this.carousel.style.cursor = 'grabbing';
+                this.pauseAutoplay();
+            }
+            
+            handleMouseMove(e) {
+                if (!this.isDragging) return;
+                this.touchEndX = e.clientX;
+            }
+            
+            handleMouseUp(e) {
+                if (!this.isDragging) return;
+                this.isDragging = false;
+                this.carousel.style.cursor = 'grab';
+                this.handleSwipe();
+                this.resumeAutoplay();
+            }
+            
+            handleSwipe() {
+                const swipeThreshold = 50;
+                const swipeDistance = this.touchStartX - this.touchEndX;
+                
+                if (Math.abs(swipeDistance) > swipeThreshold) {
+                    if (swipeDistance > 0) {
+                        this.nextSlide();
+                    } else {
+                        this.prevSlide();
+                    }
+                }
+            }
+            
+            prevSlide() {
+                this.currentSlide = this.currentSlide === 0 ? this.slides.length - 1 : this.currentSlide - 1;
+                this.updateSlide();
+            }
+            
+            nextSlide() {
+                this.currentSlide = this.currentSlide === this.slides.length - 1 ? 0 : this.currentSlide + 1;
+                this.updateSlide();
+            }
+            
+            goToSlide(index) {
+                this.currentSlide = index;
+                this.updateSlide();
+            }
+            
+            updateSlide() {
+                // Update slides
+                this.slides.forEach((slide, index) => {
+                    slide.classList.toggle('active', index === this.currentSlide);
+                    const video = slide.querySelector('video');
+                    if (index === this.currentSlide) {
+                        // Enhanced mobile video handling
+                        this.setupMobileVideoAttributes(video);
+                        video.play().catch(e => console.log('Video play failed:', e));
+                    } else {
+                        video.pause();
+                        video.currentTime = 0;
+                    }
+                });
+                
+                // Update indicators
+                this.indicators.forEach((indicator, index) => {
+                    indicator.classList.toggle('active', index === this.currentSlide);
+                });
+            }
+            
+            setupMobileVideoAttributes(video) {
+                // Ensure mobile-friendly video attributes are set
+                video.setAttribute('playsinline', '');
+                video.setAttribute('webkit-playsinline', '');
+                video.setAttribute('muted', '');
+                video.muted = true;
+                
+                // Prevent fullscreen on mobile
+                video.addEventListener('webkitbeginfullscreen', (e) => {
+                    e.preventDefault();
+                    return false;
+                });
+                
+                video.addEventListener('webkitendfullscreen', (e) => {
+                    e.preventDefault();
+                    return false;
+                });
+                
+                // Disable video controls on mobile
+                video.controls = false;
+                video.disablePictureInPicture = true;
+                
+                // Prevent context menu
+                video.addEventListener('contextmenu', (e) => {
+                    e.preventDefault();
+                    return false;
+                });
+            }
+            
+            startAutoplay() {
+                if (this.isAutoplay) {
+                    this.autoplayInterval = setInterval(() => {
+                        this.nextSlide();
+                    }, this.autoplayDelay);
+                }
+            }
+            
+            stopAutoplay() {
+                if (this.autoplayInterval) {
+                    clearInterval(this.autoplayInterval);
+                    this.autoplayInterval = null;
+                }
+            }
+            
+            pauseAutoplay() {
+                this.stopAutoplay();
+            }
+            
+            resumeAutoplay() {
+                if (this.isAutoplay) {
+                    this.startAutoplay();
+                }
+            }
+            
+            toggleAutoplay() {
+                this.isAutoplay = !this.isAutoplay;
+                
+                if (this.isAutoplay) {
+                    this.startAutoplay();
+                    this.autoplayBtn.innerHTML = `
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                        </svg>
+                    `;
+                } else {
+                    this.stopAutoplay();
+                    this.autoplayBtn.innerHTML = `
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    `;
+                }
+            }
+        }
+        
+        // Counter Animation
+        class CounterAnimation {
+            constructor() {
+                this.counterElement = document.getElementById('counterNumber');
+                this.targetNumber = 5000;
+                this.currentNumber = 0;
+                this.hasAnimated = false;
+                this.duration = 3000; // 3 seconds
+                
+                this.setupIntersectionObserver();
+            }
+            
+            setupIntersectionObserver() {
+                const options = {
+                    threshold: 0.5,
+                    rootMargin: '0px 0px -100px 0px'
+                };
+                
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting && !this.hasAnimated) {
+                            this.startAnimation();
+                            this.hasAnimated = true;
+                        }
+                    });
+                }, options);
+                
+                const counterSection = document.querySelector('.counter-section');
+                if (counterSection) {
+                    observer.observe(counterSection);
+                }
+            }
+            
+            startAnimation() {
+                const startTime = performance.now();
+                const startNumber = 0;
+                const endNumber = this.targetNumber;
+                
+                const animate = (currentTime) => {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / this.duration, 1);
+                    
+                    // Easing function for smooth animation
+                    const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+                    
+                    this.currentNumber = Math.floor(startNumber + (endNumber - startNumber) * easeOutQuart);
+                    
+                    // Format number with comma
+                    this.counterElement.textContent = this.formatNumber(this.currentNumber);
+                    
+                    if (progress < 1) {
+                        requestAnimationFrame(animate);
+                    } else {
+                        // Ensure we end with the exact target number
+                        this.counterElement.textContent = this.formatNumber(this.targetNumber);
+                    }
+                };
+                
+                requestAnimationFrame(animate);
+            }
+            
+            formatNumber(num) {
+                if (num >= this.targetNumber) {
+                    return this.targetNumber.toLocaleString() + '+';
+                }
+                return num.toLocaleString();
+            }
+        }
+        
+        // Testimonials Carousel Functionality
+        class TestimonialsCarousel {
+            constructor() {
+                this.currentSlide = 0;
+                this.slides = document.querySelectorAll('.testimonial-slide');
+                this.indicators = document.querySelectorAll('.indicator');
+                this.autoplayInterval = null;
+                this.autoplayDelay = 5000; // 5 seconds
+                
+                this.init();
+            }
+            
+            init() {
+                if (this.slides.length === 0) return;
+                
+                this.showSlide(0);
+                this.startAutoplay();
+                
+                // Add event listeners for pause on hover
+                const carousel = document.querySelector('.testimonials-carousel');
+                if (carousel) {
+                    carousel.addEventListener('mouseenter', () => this.pauseAutoplay());
+                    carousel.addEventListener('mouseleave', () => this.startAutoplay());
+                }
+            }
+            
+            showSlide(index) {
+                // Hide all slides
+                this.slides.forEach(slide => {
+                    slide.classList.remove('active');
+                });
+                
+                // Remove active class from all indicators
+                this.indicators.forEach(indicator => {
+                    indicator.classList.remove('active');
+                });
+                
+                // Show current slide
+                if (this.slides[index]) {
+                    this.slides[index].classList.add('active');
+                }
+                
+                // Activate current indicator
+                if (this.indicators[index]) {
+                    this.indicators[index].classList.add('active');
+                }
+                
+                this.currentSlide = index;
+            }
+            
+            nextSlide() {
+                const nextIndex = (this.currentSlide + 1) % this.slides.length;
+                this.showSlide(nextIndex);
+            }
+            
+            prevSlide() {
+                const prevIndex = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
+                this.showSlide(prevIndex);
+            }
+            
+            goToSlide(index) {
+                this.showSlide(index);
+            }
+            
+            startAutoplay() {
+                this.pauseAutoplay(); // Clear any existing interval
+                this.autoplayInterval = setInterval(() => {
+                    this.nextSlide();
+                }, this.autoplayDelay);
+            }
+            
+            pauseAutoplay() {
+                if (this.autoplayInterval) {
+                    clearInterval(this.autoplayInterval);
+                    this.autoplayInterval = null;
+                }
+            }
+        }
+        
+        // Global functions for carousel controls
+        let testimonialsCarousel;
+        
+        function changeSlide(direction) {
+            if (!testimonialsCarousel) return;
+            
+            if (direction === 1) {
+                testimonialsCarousel.nextSlide();
+            } else {
+                testimonialsCarousel.prevSlide();
+            }
+        }
+        
+        function currentSlide(index) {
+            if (!testimonialsCarousel) return;
+            testimonialsCarousel.goToSlide(index - 1); // Convert to 0-based index
+        }
+
+        // Initialize video carousel, counter, and testimonials when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            new VideoCarousel();
+            new CounterAnimation();
+            testimonialsCarousel = new TestimonialsCarousel();
+
+            // Set current year in footer
+            const yearEl = document.getElementById('current-year');
+            if (yearEl) {
+                yearEl.textContent = new Date().getFullYear();
+            }
+
+            // WhatsApp Order: Redirect on product "Order Now" buttons
+            (function setupWhatsAppOrderButtons() {
+                const WHATSAPP_NUMBER = '+2348105916190'; // TODO: Replace with your business number (country code + number, no +)
+                const buttons = document.querySelectorAll('.product-card .product-btn');
+                if (!buttons || buttons.length === 0) return;
+
+                buttons.forEach((btn) => {
+                    // Make it visually clear and accessible
+                    btn.classList.add('whatsapp-order-btn');
+                    btn.textContent = 'Order on WhatsApp';
+                    btn.setAttribute('aria-label', 'Order on WhatsApp');
+
+                    btn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const card = btn.closest('.product-card');
+                        const title = card?.querySelector('.product-title')?.textContent?.trim() || 'Custom Order';
+                        const price = card?.querySelector('.product-price')?.textContent?.trim() || '';
+                        const description = card?.querySelector('.product-description')?.textContent?.trim() || '';
+
+                        const message = `Hello M'O CAKES N MORE!\n\nOrder Summary:\n- Item: ${title}\n- Price: ${price}\n- Details: ${description}\n- Quantity: 1\n\nPlease confirm availability and next steps.`;
+                        const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+                        window.open(url, '_blank');
+                    });
+                });
+            })();
+        });
+    </script>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Brand & Intro -->
+                <div class="footer-brand">
+                    <img src="images/cake.jpg" alt="M'O Cakes N More logo" class="logo">
+                    <div class="footer-brand-text">
+                        <h3 class="footer-title">Cakes & More</h3>
+                        <p class="footer-tagline">Handcrafted sweets for every celebration.</p>
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <nav class="footer-nav" aria-label="Footer Navigation">
+                    <h4 class="footer-heading">Navigate</h4>
+                    <ul class="footer-links">
+                        <li><a href="#selections-section" onclick="scrollToSection('selections-section'); return false;">HOME</a></li>
+                        <li><a href="menu.html" onclick="scrollToSection('services'); return false;">MENU</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html" onclick="scrollToSection('services');return false;">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Social Media -->
+                <div class="footer-social">
+                    <h4 class="footer-heading">Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/_mos.cakesnmore/" aria-label="Instagram" class="social-link" title="Instagram" target="_blank">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="https://www.instagram.com/_mos.cakesnmore/" class="social-link" title="Facebook">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 9h3V6h-3c-2 0-3 1-3 3v2H8v3h3v6h3v-6h3v-3h-3V9z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/_mos.cakesnmore/" aria-label="X" class="social-link" title="X (Twitter)">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 4l7 8-7 8h3l6-7 6 7h3l-7-8 7-8h-3l-6 7-6-7H4z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="https://wa.link/r4weiy" aria-label="WhatsApp" class="social-link" title="WhatsApp">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2a9 9 0 00-7.7 13.6L3 22l6.6-1.3A9 9 0 1012 2zm0 2a7 7 0 110 14c-1.2 0-2.3-.3-3.3-.8l-.5-.2-3.8.7.8-3.7-.2-.5A7 7 0 0112 4zm-3 4c.2-.4.5-.5.9-.5h.6c.2 0 .4.2.5.4l.8 1.8c.1.3 0 .6-.2.8l-.5.5c.4.7 1 1.3 1.7 1.7l.5-.5c.2-.2.6-.3.8-.2l1.8.8c.2.1.4.3.4.5v.6c0 .4-.1.7-.5.9-.3.1-.6.2-.9.2-1.9 0-4.2-1.8-5.6-3.3-1.3-1.4-2.3-3.2-2.3-4.5 0-.3.1-.6.2-.9z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">&copy; <span id="current-year"></span> Cakes & More. All rights reserved.</p>
+                <div class="footer-legal">
+                    <span class="separator">•</span>
+                    <a href="index.html" class="legal-link">A proudly Nigerian brand</a>
+                    <span class="separator">•</span>
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
