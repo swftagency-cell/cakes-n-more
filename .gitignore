@@ -1,0 +1,16 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Logs / temp
+*.log
+*.tmp
+*.cache
+
+# Build artifacts (none expected for static site, kept for safety)
+dist/
+build/
+
+# Node (not used, but safe to ignore if present)
+node_modules/
